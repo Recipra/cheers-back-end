@@ -19,6 +19,7 @@ function songSearch(req, res) {
 }
 
 const index = async (req, res) => {
+  
   try {
     const songs = await Song.find({})
     res.status(200).json(songs)
