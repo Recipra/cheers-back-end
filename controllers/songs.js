@@ -12,6 +12,10 @@ function songSearch(req, res) {
   .then(songs => {
     res.json({songs: songs.data})
   })
+  .catch(err => {
+    console.log(err)
+    res.status(500).json(err)
+  })
 }
 
 const index = async (req, res) => {
